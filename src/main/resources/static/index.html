@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f8ff">
+    <title>Caesar Cipher | Encrypt & Decrypt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <!-- Header -->
+        <header class="header">
+            <button class="icon-btn menu-btn" aria-label="Menu">☰</button>
+
+            <div class="brand">
+                <div class="brand-icon">🔒</div>
+                <h1>Caesar <span>Cipher</span></h1>
+                <p>Encrypt and decrypt text with a simple shift</p>
+            </div>
+
+            <button class="icon-btn theme-btn" id="themeToggle"
+                    aria-label="Toggle dark mode">🌙</button>
+        </header>
+
+        <!-- Mode Selection -->
+        <section class="mode-switch">
+            <button class="mode active" id="encryptTab">
+                🔒 &nbsp; Encrypt
+            </button>
+            <button class="mode" id="decryptTab">
+                🔓 &nbsp; Decrypt
+            </button>
+        </section>
+
+        <!-- Input -->
+        <section class="card">
+            <div class="section-heading">
+                <h2>▤ &nbsp; Enter your message</h2>
+                <span id="charCount">0/500</span>
+            </div>
+
+            <textarea id="message"
+                maxlength="500"
+                placeholder="Type your message here..."></textarea>
+        </section>
+
+        <!-- Shift -->
+        <section class="card shift-card">
+            <div>
+                <h2>⚙ &nbsp; Shift Value</h2>
+                <p>Enter a number between 1 and 25</p>
+            </div>
+
+            <div class="shift-control">
+                <button id="minus">−</button>
+                <input type="number" id="shift"
+                       value="3" min="1" max="25">
+                <button id="plus">+</button>
+            </div>
+        </section>
+
+        <!-- Action -->
+        <button class="action-btn" id="processBtn">
+            <span id="actionText">🔒 &nbsp; Encrypt Message</span>
+            <span>→</span>
+        </button>
+
+        <!-- Result -->
+        <section class="card">
+            <div class="section-heading">
+                <h2>▤ &nbsp; Result</h2>
+                <button class="copy-btn" id="copyBtn">▢ Copy</button>
+            </div>
+
+            <textarea id="result" readonly
+                placeholder="Encrypted text will appear here..."></textarea>
+        </section>
+
+        <!-- Information -->
+        <section class="info-card">
+            <div class="bulb">♧</div>
+            <div>
+                <h2>How It Works?</h2>
+                <p>
+                    The Caesar Cipher shifts each letter in the
+                    message by a fixed number of positions in
+                    the alphabet.
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Caesar Cipher · Built with Java & Spring Boot</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
